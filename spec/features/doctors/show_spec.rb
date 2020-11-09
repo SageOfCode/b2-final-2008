@@ -27,7 +27,7 @@ RSpec.describe 'As a visitor', type: :feature do
 
     it 'I see their information along with their hospital and patients' do
       visit "/doctors/#{@doctor.id}"
-save_and_open_page
+
       expect(page).to have_content(@doctor.name)
       expect(page).to have_content(@doctor.specialty)
       expect(page).to have_content(@doctor.university)
