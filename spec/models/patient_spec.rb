@@ -5,7 +5,7 @@ RSpec.describe Patient, type: :model do
     it {should have_many :doctor_patients}
     it {should have_many(:doctors).through(:doctor_patients)}
   end 
-  describe "class methods" do 
+  describe "class method tests" do 
     it "knows patients by age" do 
       hospital = Hospital.create!(
         name: "Weenie Hut General"
