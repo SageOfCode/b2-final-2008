@@ -27,7 +27,7 @@ RSpec.describe 'As a visitor', type: :feature do
 
     it 'I see patients listed from oldest to youngest' do
       visit "/patients/index"
-      save_and_open_page
+
       expect(@patient3.name).to appear_before(@patient2.name)
       expect(@patient2.name).to appear_before(@patient1.name)
       expect(@patient1.name).to_not appear_before(@patient3.name)

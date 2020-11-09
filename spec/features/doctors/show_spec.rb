@@ -35,6 +35,7 @@ RSpec.describe 'As a visitor', type: :feature do
       expect(page).to have_content(@patient1.name)
       expect(page).to have_content(@patient2.name)
     end
+    
     it 'I see a button to remove a patient from a doctor' do
       visit "/doctors/#{@doctor.id}"
 
