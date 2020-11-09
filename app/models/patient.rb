@@ -3,4 +3,9 @@ class Patient < ApplicationRecord
 
   has_many :doctor_patients, dependent: :destroy
   has_many :doctors, through: :doctor_patients
+
+  def self.patients_by_age
+    self.all.order(age: :desc)
+  end
+  
 end
